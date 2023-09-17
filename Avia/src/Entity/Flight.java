@@ -17,7 +17,7 @@ public class Flight implements Serializable {
     private LocalDateTime flightDate;
     private List<Passenger> passengerList;
 
-    public Flight(int capacity, String code, Airline airline, Airport from, Airport to, LocalDateTime flightDate, List<Passenger> passengerList) {
+    public Flight() {
         this.id = idCount++;
         this.capacity = capacity;
         this.code = code;
@@ -30,6 +30,10 @@ public class Flight implements Serializable {
 
     public Flight(int capacity, String code, Airline airline, Airport from, Airport to, LocalDateTime dateTime, Object passengerList) {
 
+    }
+
+    public static List<Flight> searchFligth(String from, String to) {
+        return null;
     }
 
     public int getId() {
@@ -84,5 +88,9 @@ public class Flight implements Serializable {
     @Override
     public String toString() {
         return String.format("| CODE | %s  -- %25s -- %29s  -- %20s  --->  %-20s | ", code, flightDate, airline, from, to);
+    }
+
+    public List<Flight> getFlight(String from, String to) {
+        return null;
     }
 }

@@ -3,20 +3,19 @@ package menyu;
 import Entity.Flight;
 import Entity.User;
 import Util.Print;
-import controller.UserControl;
 import database.Database;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Login {
-    UserControl userController = new UserControl();
+    Register register=new Register();
     boolean b = false;
 
     public void login() {
         String userName = Print.getText("Enter username");
         String password = Print.getText("Enter password");
-        User user = userController.getUser(userName, password);
+        User user = User.getUser(userName, password);
         if (user == null) {
             System.out.println("login failed!");
         } else {

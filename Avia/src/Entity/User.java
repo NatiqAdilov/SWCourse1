@@ -29,6 +29,17 @@ public class User implements Serializable {
         this.password = password;
     }
 
+
+
+
+    public static User getUser(String userName, String password) {
+        return null;
+    }
+
+    public static boolean userRegister(User user) {
+        return true;
+    }
+
     public int getId() {
         return id;
     }
@@ -64,12 +75,6 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        return "User{id=%d, userName='%s', name='%s', surname='%s', password='%s'}".formatted(id, userName, name, surname, password);
     }
 }
